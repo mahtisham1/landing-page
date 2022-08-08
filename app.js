@@ -45,33 +45,10 @@ const navBar = document.getElementById('navbar__list');
 
         let listArray = [];
         for(let i=1; i<=3; i++){
-            for(let j=1; j<=3; j++){
-                let list = '<li><a class="menu__link" href="">Section</a></li>';
+                let list = `<li><a class="menu__link" href="">Section ${i}</a></li>`;
                 listArray.push(list);
                 navBar.innerHTML = listArray;
-            }
-                    var listText = document.querySelector('.menu__link');
-                    var innerContent = listText.textContent;
-                    innerContent = innerContent + i;
-                    // textArray.push(innerContent);
-        }
-
-    // for(let i= 1; i<= 3; i++){
-    //     var listText = document.querySelector('.menu__link');
-    //     var innerText = listText.textContent;
-
-    //     var num = innerText + i;
-    //     list.innerHTML = num;
-
-
-    //     console.log(num);
-    // }
-
-
-
-
-
-
+        };
 
 
 // Add class 'active' to section when near top of viewport
