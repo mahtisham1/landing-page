@@ -55,7 +55,9 @@ const navBar = document.getElementById('navbar__list');
 const sections = document.querySelectorAll('section');
 const activeState = document.querySelector('.your-active-class');
 function addRemoveClass(){
-        for(let i=1; i<=sections.length; i++){
+        for(let i=1; i<=sections; i++){
+
+
                 const rect = sections.getBoundingClientRect();
 
                 if(sections <= rect){
@@ -67,7 +69,6 @@ function addRemoveClass(){
                 }
         }
 }
-
 addRemoveClass();
 
 
