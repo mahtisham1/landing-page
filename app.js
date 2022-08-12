@@ -54,23 +54,23 @@ const navBar = document.getElementById('navbar__list');
 // Add class 'active' to section when near top of viewport
 const sections = document.querySelectorAll('section');
 const activeState = document.querySelector('.your-active-class');
+document.addEventListener('scroll', addRemoveClass);
+
 function addRemoveClass(){
-        for(let i=1; i<=sections; i++){
+        sections.forEach(element => {
+                const elementPosition = element.getBoundingClientRect();
+                const elementId = element.getAttribute('id');
 
-
-                const rect = sections.getBoundingClientRect();
-
-                if(sections <= rect){
-                        sections.classList.add(activeState);
+                if(element <= elementPosition){
+                        elementId.classList.add(activeState);
                 }
 
                 else{
-                        sections.classList.remove(activeState);
+                        elementId.classList.remove(activeState);
                 }
-        }
+        });
 }
 addRemoveClass();
-
 
 // Scroll to anchor ID using scrollTO event
 
